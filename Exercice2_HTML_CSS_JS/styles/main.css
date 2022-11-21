@@ -1,0 +1,37 @@
+/*
+* {
+    margin: 0;
+    padding: 0;
+}
+ */
+
+#menu
+{
+    border: 1px solid #999;
+}
+
+.menu-item > button
+{
+    width: 100%;
+    color: #FFF;
+    background-color: #007FFF!important;
+    border: none;
+    padding: 1em;
+}
+
+/*.menu-item > :nth-child(2)*/
+.menu-content
+{
+    display: flex;
+    align-items: center;
+}
+
+.menu-content > *
+{
+    margin: 1em;
+}
+
+.menu-content > img
+{
+    width: 400px;
+}
