@@ -23,8 +23,8 @@ class Mouton
 
     /**
      * Constructeur
-     * @param string|null $n nom du mouton
-     * @param int|null $v valeur du mouton
+     * @param string $n nom du mouton
+     * @param int $v valeur du mouton
      */
     public function __construct(string $n, int $v)
     {
@@ -50,6 +50,10 @@ class Mouton
         return $this->valeur;
     }
 
+    /**
+     * Retourne un nom de mouton genere aleatoirement
+     * @return string nom genere aleatoirement
+     */
     public static function randName() : string
     {
         $randNameMouton = "";
@@ -60,6 +64,10 @@ class Mouton
         return $randNameMouton;
     }
 
+    /**
+     * Retourne une valeur pour le mouton genere aleatoirement
+     * @return int entier genere aleatoirement
+     */
     public static function randVal() : int
     {
         return rand(10, 200);

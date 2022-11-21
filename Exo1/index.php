@@ -3,8 +3,9 @@
 require_once "Mouton.php";
 require_once "ListeMoutons.php";
 
-/*
+/**
  * --- MAIN ---
+ * @author Hugo COLLIN
  */
 
 try {
