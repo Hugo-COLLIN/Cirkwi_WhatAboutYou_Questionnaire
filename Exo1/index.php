@@ -24,7 +24,7 @@ try {
     // Je calcule à nouveau la moyenne
     echo "Moyenne de la valeur de mes {$moutons->nbMoutons()} moutons : {$moutons->calculerMoyenne()} <br>";
 
-    // Affichage d'un mouton généré aléatoirement (nom et valeur - pour les tests)
+    // Affichage d'un mouton généré aléatoirement (nom et valeur - pour tester)
     //$m2 = new Mouton(Mouton::randName(), Mouton::randVal());
     //echo $m2->getNom() . " : " . $m2->getValeur();
 }
