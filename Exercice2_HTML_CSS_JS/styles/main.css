@@ -14,10 +14,10 @@
 .menu-item > button
 {
     width: 100%;
-    color: #FFF;
-    background-color: #007FFF!important;
+    color: #000 /*#FFF*/;
+    background-color: #F6F6F6; /*#007FFF*/
     border: none;
-    padding: 1em;
+    padding: 0.6em;
     text-align: left;
 }
 
@@ -25,14 +25,28 @@
 {
     margin: 1em;
     content: '\25b6'; /*25bc*/
-    color: #FFF;
 }
 
-/*.menu-item > :nth-child(2)*/
 .menu-content
+{
+    display: none;
+}
+
+.menu-content-deployed
 {
     display: flex;
     align-items: center;
+}
+
+.menu-button-deployed
+{
+    color: #FFF!important;
+    background-color: #007FFF!important;
+}
+
+.menu-button-deployed::before
+{
+    content: '\25bc'!important;
 }
 
 .menu-content > *
@@ -55,6 +69,6 @@
     .menu-content > img
     {
         width: 100%;
-        max-width: 400px;
+        max-width: 350px;
     }
 }
