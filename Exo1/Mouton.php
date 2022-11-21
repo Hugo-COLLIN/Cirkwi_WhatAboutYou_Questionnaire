@@ -9,7 +9,7 @@ class Mouton
     /**
      * Chaine de lettre utilisee pour la generation automatique de noms de moutons
      */
-    public const CHAINE = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSUTVWXYZ";
+    private const CHAINE = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSUTVWXYZ";
 
     /**
      * @var string nom du mouton
