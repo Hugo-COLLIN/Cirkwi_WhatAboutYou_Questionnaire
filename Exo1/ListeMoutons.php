@@ -77,16 +77,7 @@ class ListeMoutons
      */
     public function ajouterMoutonsAlea(int $nb) : void
     {
-        $nbChars = strlen(self::CHAINE);
-        for ($j = 0; $j < $nb; $j++) {
-            $randNameMouton = "";
-            $nbCharsNameMouton = rand(3, 15);
-            $randValMoutons = rand(10, 200);
-
-            for ($k = 0; $k < $nbCharsNameMouton; $k++)
-                $randNameMouton .= self::CHAINE[rand(0, ($nbChars - 1))];
-
-            $this->ajouterMouton(new Mouton($randNameMouton, $randValMoutons));
-        }
+        for ($j = 0; $j < $nb; $j++)
+            $this->ajouterMouton(new Mouton(Mouton::randName(), Mouton::randVal()));
     }
 }

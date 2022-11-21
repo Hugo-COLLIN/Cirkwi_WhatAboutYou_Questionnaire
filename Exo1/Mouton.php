@@ -7,6 +7,11 @@
 class Mouton
 {
     /**
+     * Chaine de lettre utilisee pour la generation automatique de noms de moutons
+     */
+    public const CHAINE = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSUTVWXYZ";
+
+    /**
      * @var string nom du mouton
      */
     private string $nom;
@@ -18,8 +23,8 @@ class Mouton
 
     /**
      * Constructeur
-     * @param string $n nom du mouton
-     * @param int $v valeur du mouton
+     * @param string|null $n nom du mouton
+     * @param int|null $v valeur du mouton
      */
     public function __construct(string $n, int $v)
     {
@@ -43,5 +48,20 @@ class Mouton
     public function getValeur(): int
     {
         return $this->valeur;
+    }
+
+    public static function randName() : string
+    {
+        $randNameMouton = "";
+        $nbChars = strlen(self::CHAINE);
+        $nbCharsNameMouton = rand(3, 15);
+        for ($k = 0; $k < $nbCharsNameMouton; $k++)
+            $randNameMouton .= self::CHAINE[rand(0, ($nbChars - 1))];
+        return $randNameMouton;
+    }
+
+    public static function randVal() : int
+    {
+        return rand(10, 200);
     }
 }
