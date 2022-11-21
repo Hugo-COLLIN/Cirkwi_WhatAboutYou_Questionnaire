@@ -5,9 +5,10 @@
 }
  */
 
-#menu
+.menu-item
 {
     border: 1px solid #999;
+    margin: 0.5em;
 }
 
 .menu-item > button
@@ -17,6 +18,14 @@
     background-color: #007FFF!important;
     border: none;
     padding: 1em;
+    text-align: left;
+}
+
+.menu-item > button::before
+{
+    margin: 1em;
+    content: '\25b6'; /*25bc*/
+    color: #FFF;
 }
 
 /*.menu-item > :nth-child(2)*/
@@ -34,4 +43,18 @@
 .menu-content > img
 {
     width: 400px;
+}
+
+@media screen and (max-width: 700px)
+{
+    .menu-content
+    {
+        flex-direction: column;
+    }
+
+    .menu-content > img
+    {
+        width: 100%;
+        max-width: 400px;
+    }
 }
